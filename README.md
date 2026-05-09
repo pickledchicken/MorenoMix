@@ -48,3 +48,18 @@ The included form is static and opens the user's email app. To receive direct we
 - Feature section image now rotates every 0.5 seconds.
 - Feature slideshow starts with `images/image (02).jpg` and excludes `images/image (01).jpg`.
 - Desktop/mobile gallery behavior from v4 remains unchanged.
+
+
+## Formspree estimate form
+The contact section now uses a Formspree-compatible form. Before publishing, open `index.html` and replace:
+
+`https://formspree.io/f/{FORM_ID}`
+
+with your real Formspree endpoint, for example:
+
+`https://formspree.io/f/abcdwxyz`
+
+The form is styled in `styles.css` using the `.fs-form`, `.fs-field`, `.fs-input`, `.fs-select`, `.fs-textarea`, and `.fs-button` classes.
+
+
+UPDATE: Contact form has been replaced with the MorenoMix Formspree request form using https://formspree.io/f/xojrpjrw and matching site styling.

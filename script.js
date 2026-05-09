@@ -105,8 +105,8 @@ if (featureSlideshowImage && featureSlideshowImages.length) {
       featureSlideshowImage.src = featureSlideshowImages[featureImageIndex];
       featureSlideshowImage.alt = `MorenoMix concrete project photo ${featureImageIndex + 2}`;
       featureSlideshowImage.classList.remove("is-changing");
-    }, 150);
-  }, 1500);
+    }, 90);
+  }, 500);
 }
 
 
@@ -188,28 +188,3 @@ document.addEventListener("keydown", (event) => {
 const year = document.querySelector("#year");
 if (year) year.textContent = new Date().getFullYear();
 
-const estimateForm = document.querySelector("#estimateForm");
-estimateForm?.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  const name = document.querySelector("#name")?.value.trim() || "";
-  const phone = document.querySelector("#phone")?.value.trim() || "";
-  const message = document.querySelector("#message")?.value.trim() || "";
-
-  const subject = encodeURIComponent("MorenoMix Concrete Estimate Request");
-  const body = encodeURIComponent(
-`Hello MorenoMix,
-
-I would like a concrete estimate.
-
-Name: ${name}
-Phone: ${phone}
-
-Project Details:
-${message}
-
-Thank you.`
-  );
-
-  window.location.href = `mailto:?subject=${subject}&body=${body}`;
-});

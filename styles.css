@@ -530,49 +530,133 @@ p {
   gap: 14px;
 }
 
-.contact-form {
+
+.fs-form {
   grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 18px;
+}
+
+.fs-form fieldset {
+  margin: 0;
+  padding: 24px;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 22px;
+  background: rgba(255,255,255,.075);
+  backdrop-filter: blur(8px);
+}
+
+.fs-fieldset-title {
+  padding: 0 8px;
+  color: #fff;
+  font-family: "Agdasima", "Poppins", Arial, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.fs-field {
+  display: grid;
+  gap: 8px;
   margin-top: 16px;
 }
 
-.contact-form label {
-  display: grid;
-  gap: 8px;
-  font-weight: 700;
-}
-
-.contact-form label:nth-child(3),
-.contact-form .form-note {
+.fs-field--full {
   grid-column: 1 / -1;
 }
 
-.contact-form input,
-.contact-form textarea {
+.fs-label {
+  color: #fff;
+  font-weight: 800;
+  font-size: .92rem;
+}
+
+.fs-input,
+.fs-select,
+.fs-textarea {
   width: 100%;
-  border: 1px solid rgba(255,255,255,.2);
-  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.22);
+  background: rgba(255,255,255,.11);
   color: #fff;
   border-radius: 14px;
   padding: 14px;
   font: inherit;
+  outline: none;
+  transition: border-color .2s ease, background-color .2s ease, box-shadow .2s ease;
 }
 
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
+.fs-select {
+  appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, #fff 50%),
+    linear-gradient(135deg, #fff 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) 50%,
+    calc(100% - 14px) 50%;
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+}
+
+.fs-select option {
+  color: var(--ink);
+  background: #fff;
+}
+
+.fs-input::placeholder,
+.fs-textarea::placeholder {
   color: rgba(255,255,255,.58);
 }
 
-.contact-form button {
-  width: max-content;
+.fs-input:focus,
+.fs-select:focus,
+.fs-textarea:focus {
+  border-color: var(--orange);
+  background: rgba(255,255,255,.15);
+  box-shadow: 0 0 0 4px rgba(242,103,34,.18);
 }
 
-.form-note {
-  color: rgba(255,255,255,.58) !important;
-  font-size: .88rem;
+.fs-textarea {
+  resize: vertical;
+  min-height: 150px;
 }
+
+.fs-description {
+  margin: 0;
+  color: rgba(255,255,255,.6) !important;
+  font-size: .86rem;
+}
+
+.fs-button-group {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.fs-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 54px;
+  padding: 14px 26px;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  background: var(--orange);
+  color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.fs-button:hover {
+  background: var(--orange-dark);
+  transform: translateY(-2px);
+}
+
 
 .site-footer {
   background: #0f0f0f;
@@ -697,6 +781,10 @@ p {
     grid-template-columns: 1fr;
   }
 
+  .fs-form {
+    grid-template-columns: 1fr;
+  }
+
   .services-grid,
   .process-grid,
   .stats {
@@ -728,8 +816,13 @@ p {
     flex-direction: column;
   }
 
-  .btn {
+  .btn,
+  .fs-button {
     width: 100%;
+  }
+
+  .fs-form fieldset {
+    padding: 20px;
   }
 
   .gallery-grid {
@@ -738,10 +831,6 @@ p {
 
   .area-list {
     columns: 1;
-  }
-
-  .contact-form {
-    grid-template-columns: 1fr;
   }
 
   .brand img {
@@ -881,4 +970,32 @@ p {
   .lightbox-next {
     right: 10px;
   }
+}
+
+/* Updated contact form styling */
+.fs-form legend,
+.fs-fieldset-title {
+  padding: 0 8px;
+  color: #fff;
+  font-family: "Agdasima", "Poppins", Arial, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.fs-form input[type="date"] {
+  color-scheme: dark;
+}
+
+.fs-button {
+  background: var(--orange);
+  color: #fff;
+  border-radius: 999px;
+  box-shadow: 0 14px 28px rgba(242,103,34,.24);
+}
+
+.fs-button:hover,
+.fs-button:focus {
+  background: var(--orange-dark);
+  color: #fff;
 }
