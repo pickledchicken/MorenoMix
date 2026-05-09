@@ -15,6 +15,50 @@ if (navToggle && siteNav) {
   });
 }
 
+
+// Desktop/laptop header auto-hide on scroll.
+// Mobile menu behavior is intentionally unchanged.
+const siteHeader = document.querySelector(".site-header");
+let lastScrollY = window.scrollY;
+let tickingHeader = false;
+
+function updateDesktopHeader() {
+  if (!siteHeader) return;
+
+  const isDesktop = window.matchMedia("(min-width: 981px)").matches;
+  const currentScrollY = window.scrollY;
+
+  if (!isDesktop) {
+    siteHeader.classList.remove("is-hidden", "is-scrolled");
+    lastScrollY = currentScrollY;
+    tickingHeader = false;
+    return;
+  }
+
+  siteHeader.classList.toggle("is-scrolled", currentScrollY > 8);
+
+  if (currentScrollY <= 80) {
+    siteHeader.classList.remove("is-hidden");
+  } else if (currentScrollY > lastScrollY + 6) {
+    siteHeader.classList.add("is-hidden");
+  } else if (currentScrollY < lastScrollY - 6) {
+    siteHeader.classList.remove("is-hidden");
+  }
+
+  lastScrollY = currentScrollY;
+  tickingHeader = false;
+}
+
+window.addEventListener("scroll", () => {
+  if (!tickingHeader) {
+    window.requestAnimationFrame(updateDesktopHeader);
+    tickingHeader = true;
+  }
+}, { passive: true });
+
+window.addEventListener("resize", updateDesktopHeader);
+updateDesktopHeader();
+
 const lightbox = document.querySelector("#lightbox");
 const lightboxImage = lightbox?.querySelector("img");
 const closeLightbox = lightbox?.querySelector(".lightbox-close");
