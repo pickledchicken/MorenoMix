@@ -7,7 +7,7 @@
       </h2>
 
       <form
-        action="https://formspree.io/f/xjgjnzyy"
+        action="https://formspree.io/f/xojrpjrw"
         method="POST"
         class="fs-form fs-layout__2-column"
       >
@@ -167,7 +167,7 @@
               type="tel"
               id="phone"
               name="phone"
-              placeholder="(910) 555-5555"
+              placeholder="(555) 555-5555"
               autocomplete="tel"
               required
             >
