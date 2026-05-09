@@ -105,7 +105,7 @@ if (featureSlideshowImage && featureSlideshowImages.length) {
       featureSlideshowImage.src = featureSlideshowImages[featureImageIndex];
       featureSlideshowImage.alt = `MorenoMix concrete project photo ${featureImageIndex + 2}`;
       featureSlideshowImage.classList.remove("is-changing");
-    }, 90);
+    }, 150);
   }, 1500);
 }
 
