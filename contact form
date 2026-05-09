@@ -1,0 +1,318 @@
+
+    <!-- CONTACT -->
+    <section id="contact" class="container">
+
+      <h2>
+        Contact Us
+      </h2>
+
+      <form
+        action="https://formspree.io/f/xjgjnzyy"
+        method="POST"
+        class="fs-form fs-layout__2-column"
+      >
+
+        <!-- PERSONAL -->
+        <fieldset>
+
+          <legend>
+            Personal Details
+          </legend>
+
+          <div class="fs-field">
+
+            <label
+              class="fs-label"
+              for="name"
+            >
+              Full Name
+            </label>
+
+            <input
+              class="fs-input"
+              type="text"
+              id="name"
+              name="name"
+              autocomplete="name"
+              required
+            >
+
+          </div>
+
+        </fieldset>
+
+        <!-- ADDRESS -->
+        <fieldset>
+
+          <legend>
+            Address Details
+          </legend>
+
+          <div class="fs-field">
+
+            <label
+              class="fs-label"
+              for="address-1"
+            >
+              Address
+            </label>
+
+            <input
+              class="fs-input"
+              type="text"
+              id="address-1"
+              name="address-1"
+              autocomplete="address-line1"
+            >
+
+          </div>
+
+          <div class="fs-field">
+
+            <label
+              class="fs-label"
+              for="city"
+            >
+              City
+            </label>
+
+            <input
+              class="fs-input"
+              type="text"
+              id="city"
+              name="city"
+              autocomplete="address-level2"
+            >
+
+          </div>
+
+          <div class="fs-field">
+
+            <label
+              class="fs-label"
+              for="state"
+            >
+              State
+            </label>
+
+            <input
+              class="fs-input"
+              type="text"
+              id="state"
+              name="state"
+              autocomplete="address-level1"
+            >
+
+          </div>
+
+          <div class="fs-field">
+
+            <label
+              class="fs-label"
+              for="zip-code"
+            >
+              Zip Code
+            </label>
+
+            <input
+              class="fs-input"
+              type="text"
+              id="zip-code"
+              name="zip-code"
+              autocomplete="postal-code"
+            >
+
+          </div>
+
+        </fieldset>
+
+        <!-- CONTACT -->
+        <fieldset>
+
+          <legend>
+            Contact Information
+          </legend>
+
+          <div class="fs-field">
+
+            <label
+              class="fs-label"
+              for="email"
+            >
+              Email
+            </label>
+
+            <input
+              class="fs-input"
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              required
+            >
+
+          </div>
+
+          <div class="fs-field">
+
+            <label
+              class="fs-label"
+              for="phone"
+            >
+              Phone Number
+            </label>
+
+            <input
+              class="fs-input"
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="(910) 555-5555"
+              autocomplete="tel"
+              required
+            >
+
+          </div>
+
+        </fieldset>
+
+        <!-- MESSAGE -->
+        <fieldset>
+
+          <legend>
+            Project Details
+          </legend>
+
+          <div class="fs-field">
+
+            <label
+              class="fs-label"
+              for="message"
+            >
+              Message
+            </label>
+
+            <textarea
+              class="fs-textarea"
+              id="message"
+              name="message"
+              placeholder="Describe your roofing needs..."
+              required
+            ></textarea>
+
+          </div>
+
+        </fieldset>
+
+        <!-- SERVICES -->
+        <fieldset>
+
+          <legend>
+            Requested Services
+          </legend>
+
+          <div class="fs-field">
+
+            <label
+              class="fs-label"
+              for="service-request"
+            >
+              Service Type
+            </label>
+
+            <select
+              class="fs-select"
+              id="service-request"
+              name="services"
+            >
+
+              <option value="roof-repair">
+                Roof Repair
+              </option>
+
+              <option value="roof-replacement">
+                Roof Replacement
+              </option>
+
+              <option value="gutter-installation">
+                Gutter Installation
+              </option>
+
+              <option value="siding-installation">
+                Siding Installation
+              </option>
+
+            </select>
+
+          </div>
+
+          <div class="fs-field">
+
+            <label
+              class="fs-label"
+              for="start-date"
+            >
+              Preferred Start Date
+            </label>
+
+            <input
+              class="fs-input"
+              type="date"
+              id="start-date"
+              name="start-date"
+            >
+
+          </div>
+
+          <div class="fs-field">
+
+            <label
+              class="fs-label"
+              for="learn"
+            >
+              How Did You Hear About Us?
+            </label>
+
+            <select
+              class="fs-select"
+              id="learn"
+              name="learn"
+            >
+
+              <option value="google">
+                Google/Search Engine
+              </option>
+
+              <option value="social-media">
+                Social Media
+              </option>
+
+              <option value="website">
+                Company Website
+              </option>
+
+              <option value="referral">
+                Referral
+              </option>
+
+            </select>
+
+          </div>
+
+        </fieldset>
+
+        <!-- SUBMIT -->
+        <div class="fs-button-group">
+
+          <button
+            class="fs-button"
+            type="submit"
+          >
+            Submit Request
+          </button>
+
+        </div>
+
+      </form>
+
+    </section>
