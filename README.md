@@ -1,26 +1,44 @@
 # MorenoMix Static Website
 
-Upload these files to the root of your GitHub Pages repository:
+This folder contains a complete static MorenoMix website.
 
-- index.html
-- styles.css
-- script.js
+## Files
 
-The site uses images directly from:
+- `index.html`
+- `styles.css`
+- `script.js`
+- `/images`
+  - `MorenoMix-logo+color+lato.png`
+  - `hero.jpg`
+  - project/gallery images
 
-https://raw.githubusercontent.com/pickledchicken/MorenoMix/main/images/
+## How to publish
 
-## Publish with GitHub Pages
+Upload all files and the full `images` folder to the root of your hosting account or GitHub Pages repository.
 
-1. Commit `index.html`, `styles.css`, and `script.js` to the main branch.
-2. Go to GitHub repo Settings > Pages.
-3. Under "Build and deployment", choose:
-   - Source: Deploy from a branch
-   - Branch: main
-   - Folder: /root
-4. Save.
-5. Wait a few minutes, then open your GitHub Pages URL.
+## Important
 
-## Customize
+Do not rename `MorenoMix-logo+color+lato.png` unless you also update the references in:
 
-Update phone/email links in `index.html` if needed.
+- `index.html`
+- `styles.css` if you later add it as a background image
+
+## GitHub Pages
+
+If using GitHub Pages, your repository should look like this:
+
+```text
+/
+├── index.html
+├── styles.css
+├── script.js
+└── images/
+    ├── MorenoMix-logo+color+lato.png
+    ├── hero.jpg
+    ├── image (01).jpg
+    └── ...
+```
+
+## Contact form
+
+The included form is static and opens the user's email app. To receive direct website submissions, connect the form to a service such as Netlify Forms, Formspree, Basin, or your web host's form handler.
