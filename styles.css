@@ -358,11 +358,25 @@ p {
   align-items: center;
 }
 
+.feature-image {
+  position: relative;
+}
+
 .feature-image img {
+  width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+}
+
+.feature-slideshow-image {
+  transition: opacity .18s ease, transform .18s ease;
+}
+
+.feature-slideshow-image.is-changing {
+  opacity: .35;
+  transform: scale(.995);
 }
 
 .feature-copy p:not(.eyebrow) {

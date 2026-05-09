@@ -42,3 +42,9 @@ If using GitHub Pages, your repository should look like this:
 ## Contact form
 
 The included form is static and opens the user's email app. To receive direct website submissions, connect the form to a service such as Netlify Forms, Formspree, Basin, or your web host's form handler.
+
+
+## v5 Update
+- Feature section image now rotates every 0.5 seconds.
+- Feature slideshow starts with `images/image (02).jpg` and excludes `images/image (01).jpg`.
+- Desktop/mobile gallery behavior from v4 remains unchanged.

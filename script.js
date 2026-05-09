@@ -59,6 +59,57 @@ window.addEventListener("scroll", () => {
 window.addEventListener("resize", updateDesktopHeader);
 updateDesktopHeader();
 
+
+// Fast rotating image for the feature section.
+// Starts at image (02).jpg to avoid the less appealing pre-work image (01).
+const featureSlideshowImage = document.querySelector(".feature-slideshow-image");
+const featureSlideshowImages = [
+  "images/image (02).jpg",
+  "images/image (03).jpg",
+  "images/image (04).jpg",
+  "images/image (05).jpg",
+  "images/image (06).jpg",
+  "images/image (07).jpg",
+  "images/image (08).jpg",
+  "images/image (09).jpg",
+  "images/image (10).jpg",
+  "images/image (11).jpg",
+  "images/image (12).jpg",
+  "images/image (13).jpg",
+  "images/image (14).jpg",
+  "images/image (15).jpg",
+  "images/image (16).jpg",
+  "images/image (17).jpg",
+  "images/image (18).jpg",
+  "images/image (19).jpg",
+  "images/image (20).jpg",
+  "images/image (21).jpg",
+  "images/image 22.jpg",
+  "images/image (23).jpg",
+  "images/image (24).jpg"
+];
+
+if (featureSlideshowImage && featureSlideshowImages.length) {
+  featureSlideshowImages.forEach((src) => {
+    const image = new Image();
+    image.src = src;
+  });
+
+  let featureImageIndex = 0;
+
+  window.setInterval(() => {
+    featureImageIndex = (featureImageIndex + 1) % featureSlideshowImages.length;
+    featureSlideshowImage.classList.add("is-changing");
+
+    window.setTimeout(() => {
+      featureSlideshowImage.src = featureSlideshowImages[featureImageIndex];
+      featureSlideshowImage.alt = `MorenoMix concrete project photo ${featureImageIndex + 2}`;
+      featureSlideshowImage.classList.remove("is-changing");
+    }, 90);
+  }, 500);
+}
+
+
 const lightbox = document.querySelector("#lightbox");
 const lightboxImage = lightbox?.querySelector("img");
 const closeLightbox = lightbox?.querySelector(".lightbox-close");
